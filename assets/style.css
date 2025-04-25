@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #2e2b2e;
+}
+
+/*Paleta 1
+Verde Menta: #6BBB6D
+Azul Gelo: #90A8C3
+Branco Neve: #F9F9F9
+Rosa Pastel: #F7CAC9
+Marrom Claro: #D2B4A9*/
+
+/*Paleta 2
+Roxo: #515266
+Bege: #cdc5bb
+Bege com Roxo: #9e919c
+Azul: #99bdca
+Turquesa: #6b8fa1
+Preto: #2e2b2e
+Roxo Escuro: #605370
+Laranja: # 
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f1f1f1;
+  filter: ;
+}
+
+.container h1 {
+  margin: 2rem auto;
+}
+
+.container h2 {
+  margin: 2rem auto;
+}
+
+/*Livros*/
+
+.livros {
+  width: 80%;
+  height: 100%;
+  margin: 1rem auto;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*Velho e Novo Testamento*/
+
+.antigoTestamento,
+.novoTestamento {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.tituloTestamento {
+  width: 100%;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/*Card de livro*/
+
+.livros .livro {
+  height: 7rem;
+  width: 15rem;
+  background-color: #99bdca;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+/*Capitulos e Versiculos: obs - cvs = capitulos/versiculos e cv = capitulo/versiculo*/
+
+@keyframes aparecerCaps {
+  from {
+    transform: translatey(-500px);
+  }
+
+  to {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes desaparecerCaps {
+  from {
+    transform: translatey(0);
+  }
+
+  to {
+    transform: translatey(-500px);
+  }
+}
+
+.cvs {
+  z-index: 1;
+  background-color: #d2b4a9;
+  width: 90%;
+  height: auto;
+  margin: 0 5%;
+  position: fixed;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transform: translatey(-500px);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  animation: ;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.cvs #capver {
+  font-size: 1.6rem;
+  width: 100%;
+  line-height: 1.6rem;
+  height: 2rem;
+}
+
+.cvs .cv {
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  weight: 700;
+  background-color: #90a8c3;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+}
+
+.cvs #fechar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 5rem;
+  width: 5rem;
+  padding: 0.5rem;
+  background-color: ;
+  cursor: pointer;
+}
+
+/*Versiculos*/
+
+@keyframes aparecerVersiculos {
+  to {
+    transform: translatex(0);
+  }
+}
+
+@keyframes desaparecerVersiculos {
+  from {
+    transform: translatex(0);
+  }
+
+  to {
+    transform: translatex(-100%);
+  }
+}
+
+@keyframes desaparecerFecharVersiculos {
+  from {
+    transform: translatex(0);
+  }
+
+  to {
+    transform: translatex(-10000%);
+  }
+}
+
+.versiculos {
+  min-height: 50%;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  border: 1px solid #000;
+  z-index: 2;
+  padding: 1rem 0;
+  gap: 1rem;
+  transform: translatex(-100%);
+  animation: ;
+  font-family: "Roboto", sans-serif;
+}
+
+.versiculos .versiculo {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  height: auto;
+  align-items: center;
+  display: block;
+}
+
+.versiculos .versiculo .numVersiculo {
+  font-size: 1.4rem;
+  weight: 700;
+}
+
+.versiculos .versiculo .txtVersiculo {
+  font-size: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.versiculos .buttons {
+  margin: 1rem auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.versiculos .buttons button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#sairVersiculo {
+  z-index: 5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  height: 1rem;
+  width: 1rem;
+  background-color: pink;
+  cursor: pointer;
+  transform: translatex(-10000%);
+  animation: ;
+}
